@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103868238267",
+    "project_id": "food-94da4",
+    "storage_bucket": "food-94da4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103868238267:android:11b3d0f94aa8cb3d7bdc9e",
+        "android_client_info": {
+          "package_name": "uz.captan.food_up"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103868238267-knrunbqmpp96jgn5p7f7p95ig5c0qgl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbvYjOQjTO0RiSDDTs-cP7YZTjXjLfmzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103868238267-knrunbqmpp96jgn5p7f7p95ig5c0qgl6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
