@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'uz.captan.presentation'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    compileOnly 'androidx.core:core-ktx:1.10.1'
+    compileOnly 'androidx.appcompat:appcompat:1.6.1'
+    compileOnly 'com.google.android.material:material:1.9.0'
+    implementation project(path: ':domain')
+    def koin_version = '3.3.2'
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation 'io.insert-koin:koin-androidx-compose:3.4.1'
+    //MVI orbit
+    implementation("org.orbit-mvi:orbit-compose:4.3.2")
+    implementation("org.orbit-mvi:orbit-viewmodel:4.3.2")
+    def voyagerVersion = "1.0.0-rc05"
+
+    // Multiplatform
+
+    // Navigator
+    implementation "cafe.adriel.voyager:voyager-navigator:$voyagerVersion"
+
+    // BottomSheetNavigator
+    implementation "cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion"
+
+    // TabNavigator
+    implementation "cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion"
+
+    // Transitions
+    implementation "cafe.adriel.voyager:voyager-transitions:$voyagerVersion"
+
+    // Android
+
+    // Android ViewModel integration
+    implementation "cafe.adriel.voyager:voyager-androidx:$voyagerVersion"
+
+    // Koin integration
+    implementation "cafe.adriel.voyager:voyager-koin:$voyagerVersion"
+
+}

@@ -13,4 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "food_up"
-include ':app'
+include ':foodUpOrder'
+include ':data'
+include ':domain'
+include ':presentation'

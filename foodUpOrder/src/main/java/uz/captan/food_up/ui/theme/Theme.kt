@@ -39,7 +39,7 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun FoodUpTheme(
-    darkTheme: ThemeUtil = ThemeUtil.DARK,
+    darkTheme: ThemeUtil = ThemeUtil.LIGHT,
     content: @Composable () -> Unit
 ) {
 
@@ -56,7 +56,7 @@ fun FoodUpTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = Color.Transparent.toArgb()
+            window.statusBarColor = appColorScheme.primary.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = when (darkTheme) {
                 ThemeUtil.LIGHT -> false
                 ThemeUtil.DARK -> true
