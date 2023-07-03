@@ -1,7 +1,7 @@
-package uz.captan.food_up.navigator
+package uz.captan.presentation.navigator
 
 import kotlinx.coroutines.flow.Flow
-import uz.captan.food_up.utils.NavigatorArg
+import uz.captan.presentation.utils.NavigatorArg
 
 interface NavigationHandler {
     val navStack: Flow<NavigatorArg>

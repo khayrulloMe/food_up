@@ -1,17 +1,19 @@
-package uz.captan.food_up.navigator
+package uz.captan.presentation.navigator
 
-import kotlinx.coroutines.flow.Flow
+import androidx.compose.runtime.Composable
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharedFlow
-import uz.captan.food_up.utils.AppScreen
-import uz.captan.food_up.utils.NavigatorArg
+
+import uz.captan.presentation.utils.AppScreen
+import uz.captan.presentation.utils.NavigatorArg
 
 class NavigationDispatcher : AppNavigator, NavigationHandler {
     override suspend fun back() = navigator {
         popAll()
     }
 
-    override suspend fun toScreen(screen: AppScreen) = navigator {
+    override suspend fun navigateTo(screen: AppScreen) = navigator {
         push(screen)
     }
 
